@@ -6,16 +6,19 @@ def intersection(arrays):
     # For each of the arrays, check values, create each value, set equal to 1 (it exists)
     for arr in range(0, len(arrays)):
         for i in arrays[arr]:
-            view_counts[arr][i] = 1
+            try:
+                view_counts[arr][i] = 1
+            except:
+                pass
 
-    # Not passing tests yet.
+    # Got the "large" test to pass, but not the small yet lol
     intersections = []
-    for dic in range(0, len(view_counts)):
-        for i in view_counts[dic]:
-            if i in view_counts[0:2]:
-                if i not in intersections:
-                    intersections.append(view_counts[dic][i][0])
+    # For each number in first dict, check if it's in 2nd and 3rd.
+    for num in view_counts[0]:
+        if num in view_counts[1] and num in view_counts[2]:
+            intersections.append(i)
 
+    print(intersections)
     return intersections
 
 
