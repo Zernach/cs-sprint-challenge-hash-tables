@@ -11,12 +11,12 @@ def intersection(arrays):
             except:
                 pass
 
-    # Got the "large" test to pass, but not the small yet lol
+    # Got the "large" test to pass, but not the small lol
     intersections = []
     # For each number in first dict, check if it's in 2nd and 3rd.
     for num in view_counts[0]:
         if num in view_counts[1] and num in view_counts[2]:
-            intersections.append(i)
+            intersections.append(num)
 
     print(intersections)
     return intersections
